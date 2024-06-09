@@ -1,0 +1,29 @@
+.main {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+.detailsWrapper{
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+}
+
+@media (max-width:767px) {
+  .detailsWrapper{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width:550px) {
+  .detailsWrapper{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+

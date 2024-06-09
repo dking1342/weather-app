@@ -1,0 +1,19 @@
+.errorContainer {
+  height: 100%;
+  width: 100%;
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  gap:2rem;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to right top, #ec5b95, #e1689d, #d674a3, #ca7ea6, #bf87a8, #c28aa3, #c48f9f, #c4939c, #cc9690, #ce9c84, #c8a47a, #bbae77);
+  border-radius: 15px;
+  box-shadow: 0 15px 10px rgba(0,0,0,0.2);
+}
+
+.errorContainer p{
+  font-size: clamp(1rem,3vw,3rem);
+  font-weight: lighter;
+  color:var(--primary-color);
+}
