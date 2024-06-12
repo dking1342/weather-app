@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: weather-pod
+spec:
+  containers:
+  - name: weather-container
+    image: kavooce42/weather-app
+    resources:
+      limits:
+        memory: "2Gb"
+        cpu: "500m"
+    env:
+    - name: API_KEY
+      valueFrom:
+        secretKeyRef:
+          name: weather-secret
+          key: NEXT_PUBLIC_OPENWEATHERMAP_API_KEY
+    volumeMounts:
+    - name: config-volume
+      mountPath: /etc/config
+  volumes:
+  - name: config-volume
+    configMap:
+      name: weather-config
